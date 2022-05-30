@@ -11,7 +11,8 @@ import SwiftUI
 struct shaderBaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+          MetalView()
         }
     }
 }
