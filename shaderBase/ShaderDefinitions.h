@@ -8,6 +8,8 @@
 #ifndef ShaderDefinitions_h
 #define ShaderDefinitions_h
 
+#import "CommonLibraries.h"
+
 struct VertexIn {
   float4 position [[attribute(0)]];
 };
@@ -17,5 +19,6 @@ struct VertexOut {
 };
 
 
+float4 fragment_cloud_animations(float2 uv, float timer);
 
 #endif /* ShaderDefinitions_h */

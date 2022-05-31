@@ -18,6 +18,7 @@
 		2C7560332844DB190056AB23 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7560322844DB190056AB23 /* MetalView.swift */; };
 		2C756036284681CF0056AB23 /* CloudEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C756035284681CF0056AB23 /* CloudEffect.metal */; };
 		2C75603C284683860056AB23 /* FragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75603B284683860056AB23 /* FragmentShader.metal */; };
+		2C75603E284688440056AB23 /* CommonLibraries.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75603D284688440056AB23 /* CommonLibraries.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		2C756035284681CF0056AB23 /* CloudEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CloudEffect.metal; sourceTree = "<group>"; };
 		2C75603A284683060056AB23 /* ShaderDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefinitions.h; sourceTree = "<group>"; };
 		2C75603B284683860056AB23 /* FragmentShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FragmentShader.metal; sourceTree = "<group>"; };
+		2C75603D284688440056AB23 /* CommonLibraries.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CommonLibraries.metal; sourceTree = "<group>"; };
+		2C75603F284689100056AB23 /* CommonLibraries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonLibraries.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				2C75602A2844DAFD0056AB23 /* Quad.swift */,
 				2C75602C2844DB0D0056AB23 /* Utility.swift */,
 				2C75602E2844DB120056AB23 /* VertexShader.metal */,
+				2C75603D284688440056AB23 /* CommonLibraries.metal */,
+				2C75603F284689100056AB23 /* CommonLibraries.h */,
 				2C75603B284683860056AB23 /* FragmentShader.metal */,
 				2C756035284681CF0056AB23 /* CloudEffect.metal */,
 				2C75603A284683060056AB23 /* ShaderDefinitions.h */,
@@ -168,6 +173,7 @@
 				2C7560332844DB190056AB23 /* MetalView.swift in Sources */,
 				2C75602B2844DAFD0056AB23 /* Quad.swift in Sources */,
 				2C75601C2844DAA00056AB23 /* ContentView.swift in Sources */,
+				2C75603E284688440056AB23 /* CommonLibraries.metal in Sources */,
 				2C75602F2844DB120056AB23 /* VertexShader.metal in Sources */,
 				2C7560312844DB160056AB23 /* Renderer.swift in Sources */,
 				2C756036284681CF0056AB23 /* CloudEffect.metal in Sources */,

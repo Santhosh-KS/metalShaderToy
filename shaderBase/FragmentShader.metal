@@ -20,10 +20,9 @@ fragment float4 fragment_main(constant ScreenDimensions &screen [[buffer(11)]],
                               constant float &timer [[buffer(20)]],
                               VertexOut in [[stage_in]])
 {
+  
   float2 resolution = screenResolution(screen.width, screen.height);
   float2 uv = (in.position.xy-resolution)/ screen.width;
-  float3 col = float3(0);
-  col = float3(uv,0);
-  return float4(col,1);
+  return fragment_cloud_animations(uv,timer);
 }
 
