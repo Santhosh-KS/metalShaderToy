@@ -73,14 +73,8 @@ extension Renderer: MTKViewDelegate {
       length: MemoryLayout<ScreenDimensions>.stride,
       index: 11)
     
-//    var timer: Float = 0
-//
-//      // 1
-//    timer += 10.1
-//    var currentTime = sin(timer)
     timer += 0.1
     var currentTime = timer
-      // 2
     renderEncoder.setFragmentBytes(
       &currentTime,
       length: MemoryLayout<Float>.stride,
