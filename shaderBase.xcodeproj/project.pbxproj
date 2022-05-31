@@ -13,9 +13,11 @@
 		2C7560212844DAA10056AB23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7560202844DAA10056AB23 /* Preview Assets.xcassets */; };
 		2C75602B2844DAFD0056AB23 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75602A2844DAFD0056AB23 /* Quad.swift */; };
 		2C75602D2844DB0D0056AB23 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C75602C2844DB0D0056AB23 /* Utility.swift */; };
-		2C75602F2844DB120056AB23 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75602E2844DB120056AB23 /* Shader.metal */; };
+		2C75602F2844DB120056AB23 /* VertexShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75602E2844DB120056AB23 /* VertexShader.metal */; };
 		2C7560312844DB160056AB23 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7560302844DB160056AB23 /* Renderer.swift */; };
 		2C7560332844DB190056AB23 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7560322844DB190056AB23 /* MetalView.swift */; };
+		2C756036284681CF0056AB23 /* CloudEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C756035284681CF0056AB23 /* CloudEffect.metal */; };
+		2C75603C284683860056AB23 /* FragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75603B284683860056AB23 /* FragmentShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +29,13 @@
 		2C7560222844DAA10056AB23 /* shaderBase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shaderBase.entitlements; sourceTree = "<group>"; };
 		2C75602A2844DAFD0056AB23 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
 		2C75602C2844DB0D0056AB23 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		2C75602E2844DB120056AB23 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		2C75602E2844DB120056AB23 /* VertexShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VertexShader.metal; sourceTree = "<group>"; };
 		2C7560302844DB160056AB23 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		2C7560322844DB190056AB23 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		2C7560342844DB1E0056AB23 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2C756035284681CF0056AB23 /* CloudEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CloudEffect.metal; sourceTree = "<group>"; };
+		2C75603A284683060056AB23 /* ShaderDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderDefinitions.h; sourceTree = "<group>"; };
+		2C75603B284683860056AB23 /* FragmentShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FragmentShader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,14 +68,17 @@
 		2C7560182844DAA00056AB23 /* shaderBase */ = {
 			isa = PBXGroup;
 			children = (
+				2C75601B2844DAA00056AB23 /* ContentView.swift */,
 				2C7560192844DAA00056AB23 /* shaderBaseApp.swift */,
 				2C7560302844DB160056AB23 /* Renderer.swift */,
-				2C7560342844DB1E0056AB23 /* Common.h */,
 				2C7560322844DB190056AB23 /* MetalView.swift */,
 				2C75602A2844DAFD0056AB23 /* Quad.swift */,
 				2C75602C2844DB0D0056AB23 /* Utility.swift */,
-				2C75602E2844DB120056AB23 /* Shader.metal */,
-				2C75601B2844DAA00056AB23 /* ContentView.swift */,
+				2C75602E2844DB120056AB23 /* VertexShader.metal */,
+				2C75603B284683860056AB23 /* FragmentShader.metal */,
+				2C756035284681CF0056AB23 /* CloudEffect.metal */,
+				2C75603A284683060056AB23 /* ShaderDefinitions.h */,
+				2C7560342844DB1E0056AB23 /* Common.h */,
 				2C75601D2844DAA10056AB23 /* Assets.xcassets */,
 				2C7560222844DAA10056AB23 /* shaderBase.entitlements */,
 				2C75601F2844DAA10056AB23 /* Preview Content */,
@@ -160,9 +168,11 @@
 				2C7560332844DB190056AB23 /* MetalView.swift in Sources */,
 				2C75602B2844DAFD0056AB23 /* Quad.swift in Sources */,
 				2C75601C2844DAA00056AB23 /* ContentView.swift in Sources */,
-				2C75602F2844DB120056AB23 /* Shader.metal in Sources */,
+				2C75602F2844DB120056AB23 /* VertexShader.metal in Sources */,
 				2C7560312844DB160056AB23 /* Renderer.swift in Sources */,
+				2C756036284681CF0056AB23 /* CloudEffect.metal in Sources */,
 				2C75601A2844DAA00056AB23 /* shaderBaseApp.swift in Sources */,
+				2C75603C284683860056AB23 /* FragmentShader.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
