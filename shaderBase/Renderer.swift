@@ -14,6 +14,7 @@ class Renderer: NSObject {
   var commandQueue: MTLCommandQueue
   var library: MTLLibrary
   var pipelineState: MTLRenderPipelineState
+  var timer: Float = 0
   
   var screenDimension = ScreenDimensions()
   
@@ -71,6 +72,20 @@ extension Renderer: MTKViewDelegate {
       &screenDimension,
       length: MemoryLayout<ScreenDimensions>.stride,
       index: 11)
+    
+//    var timer: Float = 0
+//
+//      // 1
+//    timer += 10.1
+//    var currentTime = sin(timer)
+    timer += 0.1
+    var currentTime = timer
+      // 2
+    renderEncoder.setFragmentBytes(
+      &currentTime,
+      length: MemoryLayout<Float>.stride,
+      index: 20)
+
     renderEncoder.drawIndexedPrimitives(type: .triangle,
                                         indexCount: quad.indices.count,
                                         indexType: .uint16,
