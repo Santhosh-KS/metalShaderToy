@@ -23,8 +23,6 @@ float interestingPattern() {
   return  0.0;
 }
 
-
-
 float octaveOfNoise(float2 uv) {
   float r = smoothNoise(uv,8);
   r += smoothNoise(uv,16)*0.5;

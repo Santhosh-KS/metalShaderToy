@@ -12,8 +12,8 @@ using namespace metal;
 #import "ShaderDefinitions.h"
 
 
-vertex float4 vertex_main(const VertexIn vertexIn [[stage_in]]) {
-  return vertexIn.position;
+vertex VertexOut vertex_main(const VertexIn vertexIn [[stage_in]]) {
+  return VertexOut{vertexIn.position};
 }
 
 

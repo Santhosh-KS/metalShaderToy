@@ -9,6 +9,7 @@
 using namespace metal;
 
 #import "Common.h"
+#import "CommonLibraries.h"
 #import "ShaderDefinitions.h"
 
 float2 screenResolution(float x, float y)
@@ -23,6 +24,9 @@ fragment float4 fragment_main(constant ScreenDimensions &screen [[buffer(11)]],
   
   float2 resolution = screenResolution(screen.width, screen.height);
   float2 uv = (in.position.xy-resolution)/ screen.width;
-  return fragment_cloud_animations(uv,timer);
+//  float3 col(0);
+  float3 col = mandleBrot(uv);
+  col += grid(uv*100).rgb;
+  return float4(col,1);
 }
 

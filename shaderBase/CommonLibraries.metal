@@ -8,17 +8,16 @@
 #include <metal_stdlib>
 using namespace metal;
 
-
-
 float noise21(float2 uv)
 {
   return  fract(sin(uv.x*500+ uv.y*374)*7363);
 }
 
-float3 circle(float2 uv, float scale=0.005)
+float4 circle(float2 uv, float scale=0.005)
 {
   float d = length(uv);
-  return float3(scale/d);
+  float3 c(scale/d);
+  return float4(c,1);
 }
 
 float smoothNoise(float2 uv, int m=10) {
@@ -35,4 +34,19 @@ float smoothNoise(float2 uv, int m=10) {
   
   float r = mix(b,t,lv.y);
   return r;
+}
+
+float4 grid(float2 uv) {
+  float3 col(0);
+  if(abs(uv.x)<fwidth(uv.x)) col.g = 1;
+  if(abs(uv.y)<fwidth(uv.y)) col.r = 1.;
+  float2 grid = 1.-abs(fract(uv)-.5)*2.;
+  grid = smoothstep(fwidth(grid), float2(0), grid);
+  col += float3((grid.x+grid.y)*0.5);
+  return float4(col*.5,1);
+}
+
+float point(float2 uv, float2 p) {
+//  return smoothstep(.08,.06, length(uv-p));
+  return smoothstep(0.8,0.7, floor(length(uv-p)*10));
 }

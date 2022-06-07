@@ -9,6 +9,7 @@ import SwiftUI
 import MetalKit
 
 struct MetalView: View {
+//  @Binding var metalView:MTKView
   @State private var metalView = MTKView()
   @State private var renderer: Renderer?
   
@@ -30,6 +31,7 @@ struct MetalViewRepresentable: NSViewRepresentable {
   
   func makeNSView(context: Context) -> some NSView {
     metalView
+//    MTKView()
   }
   func updateNSView(_ uiView: NSViewType, context: Context) {
     updateMetalView()
