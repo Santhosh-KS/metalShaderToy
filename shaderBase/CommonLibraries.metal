@@ -13,6 +13,13 @@ float noise21(float2 uv)
   return  fract(sin(uv.x*500+ uv.y*374)*7363);
 }
 
+float2 noise22(float2 p)
+{
+  float3 a = fract(p.xyx*float3(123.34, 234.34, 345.65));
+  a += dot(a, a+34.45);
+  return  fract(float2(a.x*a.y,a.y*a.z));
+}
+
 float4 circle(float2 uv, float scale=0.005)
 {
   float d = length(uv);

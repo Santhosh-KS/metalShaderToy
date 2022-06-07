@@ -25,4 +25,6 @@ float4 mandleBrot(float2 uv);
 
 float4 circleEffect(float2 uv, float timer);
 
+float4 voronoiEffect(float2 uv, float timer);
+
 #endif /* ShaderDefinitions_h */

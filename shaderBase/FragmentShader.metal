@@ -26,5 +26,6 @@ fragment float4 fragment_main(constant ScreenDimensions &screen [[buffer(11)]],
   float2 resolution = screenResolution(screen.width, screen.height);
   float2 uv = (in.position.xy-resolution)/ screen.width;
 //  float3 col(0);
-  return circleEffect(uv,timer);
+
+  return  voronoiEffect(uv, timer);
 }

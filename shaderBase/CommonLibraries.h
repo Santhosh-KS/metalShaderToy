@@ -12,6 +12,7 @@ float2 screenResolution(float x, float y);
 
 // Noise functions
 float noise21(float2 uv); // pseudo random noise
+float2 noise22(float2 p);
 float smoothNoise(float2 uv, int m); // psuedo random smooth noise
 
 // Geometric shapes
