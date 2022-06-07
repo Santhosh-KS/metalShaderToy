@@ -19,5 +19,6 @@ float4 circle(float2 uv, float scale);
 
 float4 grid(float2 uv);
 float point(float2 uv, float2 p);
+float Xor(float a, float b);
 
 #endif /* CommonLibraries_h */

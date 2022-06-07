@@ -20,6 +20,7 @@
 		2C75603C284683860056AB23 /* FragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75603B284683860056AB23 /* FragmentShader.metal */; };
 		2C75603E284688440056AB23 /* CommonLibraries.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C75603D284688440056AB23 /* CommonLibraries.metal */; };
 		2C8650BE284F3808000E35CC /* MandelBrot.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650BD284F3808000E35CC /* MandelBrot.metal */; };
+		2C8650DD284F62B8000E35CC /* CircleEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650DC284F62B8000E35CC /* CircleEffects.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2C75603D284688440056AB23 /* CommonLibraries.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CommonLibraries.metal; sourceTree = "<group>"; };
 		2C75603F284689100056AB23 /* CommonLibraries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonLibraries.h; sourceTree = "<group>"; };
 		2C8650BD284F3808000E35CC /* MandelBrot.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MandelBrot.metal; sourceTree = "<group>"; };
+		2C8650DC284F62B8000E35CC /* CircleEffects.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CircleEffects.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +85,14 @@
 				2C75603D284688440056AB23 /* CommonLibraries.metal */,
 				2C75603B284683860056AB23 /* FragmentShader.metal */,
 				2C756035284681CF0056AB23 /* CloudEffect.metal */,
+				2C8650BD284F3808000E35CC /* MandelBrot.metal */,
+				2C8650DC284F62B8000E35CC /* CircleEffects.metal */,
 				2C75603F284689100056AB23 /* CommonLibraries.h */,
 				2C75603A284683060056AB23 /* ShaderDefinitions.h */,
 				2C7560342844DB1E0056AB23 /* Common.h */,
 				2C75601D2844DAA10056AB23 /* Assets.xcassets */,
 				2C7560222844DAA10056AB23 /* shaderBase.entitlements */,
 				2C75601F2844DAA10056AB23 /* Preview Content */,
-				2C8650BD284F3808000E35CC /* MandelBrot.metal */,
 			);
 			path = shaderBase;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8650DD284F62B8000E35CC /* CircleEffects.metal in Sources */,
 				2C75602D2844DB0D0056AB23 /* Utility.swift in Sources */,
 				2C7560332844DB190056AB23 /* MetalView.swift in Sources */,
 				2C75602B2844DAFD0056AB23 /* Quad.swift in Sources */,

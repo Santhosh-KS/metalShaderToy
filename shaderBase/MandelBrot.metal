@@ -12,11 +12,11 @@ using namespace metal;
 #import "CommonLibraries.h"
 #import "ShaderDefinitions.h"
 
-float3 mandleBrot(float2 uv)
+float4 mandleBrot(float2 uv)
 {
   float2 m(0.000001,0.000001);
   float zoom = pow(10, -m.x*3);
-  float maxIter = 100;
+  float maxIter = 50;
   float2 z(0);
   float2 c = uv*zoom*3;
   c += float2(-0.39955, 0.07999);
@@ -28,5 +28,6 @@ float3 mandleBrot(float2 uv)
   }
   float f = itr/maxIter;
   float3 col(f);
-  return  col;
+  return  float4(col,1);
 }
+

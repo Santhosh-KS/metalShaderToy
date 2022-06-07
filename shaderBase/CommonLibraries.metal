@@ -50,3 +50,8 @@ float point(float2 uv, float2 p) {
 //  return smoothstep(.08,.06, length(uv-p));
   return smoothstep(0.8,0.7, floor(length(uv-p)*10));
 }
+
+
+float Xor(float a, float b) {
+  return a*(1-b) + b*(1-a);
+}

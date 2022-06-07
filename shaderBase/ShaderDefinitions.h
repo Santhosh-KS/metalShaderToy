@@ -21,6 +21,8 @@ struct VertexOut {
 
 float4 fragment_cloud_animations(float2 uv, float timer);
 
-float3 mandleBrot(float2 uv);
+float4 mandleBrot(float2 uv);
+
+float4 circleEffect(float2 uv, float timer);
 
 #endif /* ShaderDefinitions_h */

@@ -17,6 +17,7 @@ float2 screenResolution(float x, float y)
   return float2(0.5*x, 0.5*y);
 }
 
+
 fragment float4 fragment_main(constant ScreenDimensions &screen [[buffer(11)]],
                               constant float &timer [[buffer(20)]],
                               VertexOut in [[stage_in]])
@@ -25,8 +26,5 @@ fragment float4 fragment_main(constant ScreenDimensions &screen [[buffer(11)]],
   float2 resolution = screenResolution(screen.width, screen.height);
   float2 uv = (in.position.xy-resolution)/ screen.width;
 //  float3 col(0);
-  float3 col = mandleBrot(uv);
-  col += grid(uv*100).rgb;
-  return float4(col,1);
+  return circleEffect(uv,timer);
 }
-
