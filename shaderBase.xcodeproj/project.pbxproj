@@ -22,6 +22,7 @@
 		2C8650BE284F3808000E35CC /* MandelBrot.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650BD284F3808000E35CC /* MandelBrot.metal */; };
 		2C8650DD284F62B8000E35CC /* CircleEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650DC284F62B8000E35CC /* CircleEffects.metal */; };
 		2C8650DF284F708E000E35CC /* VoronoiEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650DE284F708E000E35CC /* VoronoiEffect.metal */; };
+		2C8650E1284F79F5000E35CC /* TurchetEffects.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2C8650E0284F79F5000E35CC /* TurchetEffects.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		2C8650BD284F3808000E35CC /* MandelBrot.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MandelBrot.metal; sourceTree = "<group>"; };
 		2C8650DC284F62B8000E35CC /* CircleEffects.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CircleEffects.metal; sourceTree = "<group>"; };
 		2C8650DE284F708E000E35CC /* VoronoiEffect.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = VoronoiEffect.metal; sourceTree = "<group>"; };
+		2C8650E0284F79F5000E35CC /* TurchetEffects.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TurchetEffects.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +91,14 @@
 				2C756035284681CF0056AB23 /* CloudEffect.metal */,
 				2C8650BD284F3808000E35CC /* MandelBrot.metal */,
 				2C8650DC284F62B8000E35CC /* CircleEffects.metal */,
+				2C8650DE284F708E000E35CC /* VoronoiEffect.metal */,
+				2C8650E0284F79F5000E35CC /* TurchetEffects.metal */,
 				2C75603F284689100056AB23 /* CommonLibraries.h */,
 				2C75603A284683060056AB23 /* ShaderDefinitions.h */,
 				2C7560342844DB1E0056AB23 /* Common.h */,
 				2C75601D2844DAA10056AB23 /* Assets.xcassets */,
 				2C7560222844DAA10056AB23 /* shaderBase.entitlements */,
 				2C75601F2844DAA10056AB23 /* Preview Content */,
-				2C8650DE284F708E000E35CC /* VoronoiEffect.metal */,
 			);
 			path = shaderBase;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				2C8650BE284F3808000E35CC /* MandelBrot.metal in Sources */,
 				2C756036284681CF0056AB23 /* CloudEffect.metal in Sources */,
 				2C75601A2844DAA00056AB23 /* shaderBaseApp.swift in Sources */,
+				2C8650E1284F79F5000E35CC /* TurchetEffects.metal in Sources */,
 				2C75603C284683860056AB23 /* FragmentShader.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
