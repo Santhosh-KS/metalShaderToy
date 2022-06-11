@@ -101,7 +101,7 @@ float4 truchetCircleSnakeAnimationEffect(float2 uv, float timer)
   }
   float t = timer*0.4;
   float threshold(0.48);
-    //  if (gv.x > threshold || gv.y > threshold) col = float3(1,0,0);
+      if (gv.x > threshold || gv.y > threshold) col = float3(1,0,0);
   float width(0.1);
   float d = abs(abs(gv.x + gv.y) - 0.5)-width;
   float2 cUv = gv - sign(gv.x + gv.y)*0.5;
@@ -128,17 +128,17 @@ float4 truchetFinalwithTurchetUVCoordinates(float2 uv, float timer)
   if (n < 0.5 ) {
     gv.x *= -1;
   }
-  float t = timer*0.4;
+//  float t = timer*0.4;
   float threshold(0.48);
-    //  if (gv.x > threshold || gv.y > threshold) col = float3(1,0,0);
+      if (gv.x > threshold || gv.y > threshold) col = float3(1,0,0);
   float width(0.2);
   float d = abs(abs(gv.x + gv.y) - 0.5)-width;
   float2 cUv = gv - sign(gv.x + gv.y)*0.5;
   d = length(cUv);
   float mask = smoothstep(0.01,-0.01, abs(d-0.5)-width);
   float angle = atan(cUv.y/cUv.x);
-  float checker = (fract((id.x + id.y)/2.0)*2)-0.6;
-    //  col += sin(t + checker*angle*20)*mask;
+//  float checker = (fract((id.x + id.y)/2.0)*2)-0.6;
+//      col += sin(t + checker*angle*20)*mask;
   float x = (angle/1.57);
   float y = ( d - (0.5-width))/(2*width);
   y = abs(y-0.5)*2;

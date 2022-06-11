@@ -18,7 +18,7 @@ float4 circleEffect(float2 uv, float timer)
   float c = cos(a), s = sin(a);
   float2x2 rotation(c,-s,s,c);
   uv *= rotation;
-  uv = uv*40;
+  uv = uv*30;
   float2 gv = fract(uv)-0.5;
   float2 id = floor(uv);
   
@@ -36,7 +36,8 @@ float4 circleEffect(float2 uv, float timer)
     }
   }
   float3 col(0);
-  col.rg = gv;
-  col += m;//fmod(m, 2);
+//  col.rg = gv;
+  col.r += m;//fmod(m, 2);
+  col.b += m;
   return float4(col,1);
 }
